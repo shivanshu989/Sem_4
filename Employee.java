@@ -19,18 +19,11 @@ class Next{
             a[i]=new Employee();
         }
         int x=a[0].sal;
-        int y=a[0].sal;
         int f=0;
         for(int i=1;i<a.length;i++){
             if(a[i].sal>x){
                 x=a[i].sal;
-            }
-            else if(a[i].sal>y){
-                y=a[i].sal;
-                f=i;
-            }
-            else{
-                continue;
+                f=i-1;
             }
         }
         System.out.println(a[f].name+" "+a[f].id+" "+a[f].sal);
